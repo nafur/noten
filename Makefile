@@ -1,10 +1,10 @@
-tunes := $(wildcard tunes/*.abc)
-build := $(subst tunes,build,$(tunes))
+songs := $(wildcard songs/*.abc)
+build := $(subst songs,build,$(songs))
 ps :=  $(build:abc=ps)
 eps := $(build:abc=eps)
 pdf := $(build:abc=pdf)
 
-build/%.ps: tunes/%.abc
+build/%.ps: songs/%.abc
 	abcm2ps -c -w 17.5cm -O $@ $<
 
 build/%.eps: build/%.ps
@@ -16,8 +16,8 @@ build/%.pdf: build/%.eps
 build/main.pdf: main.tex $(pdf)
 	pdflatex -interaction=nonstopmode --output-directory build --shell-escape main.tex
 
-build/tunes.zip: $(pdf)
-	zip tunes.zip build/*.pdf -x build/main.pdf -j
+build/songs.zip: $(pdf)
+	zip songs.zip build/*.pdf -x build/main.pdf -j
 
 clean:
 	rm -f build/* main.pdf

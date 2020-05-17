@@ -12,7 +12,7 @@ jobs:
         run: |
           sudo apt install abcm2ps ps2eps texlive-font-utils texlive-latex-base
       - name: Build
-        run: make build/main.pdf build/tunes.zip
+        run: make build/main.pdf build/songs.zip
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
@@ -30,12 +30,12 @@ jobs:
           asset_path: build/main.pdf
           asset_name: main.pdf
           asset_content_type: application/pdf
-      - name: Add individual tunes to release
+      - name: Add individual songs to release
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/main.pdf
-          asset_name: main.pdf
-          asset_content_type: application/pdf
+          asset_path: build/songs.zip
+          asset_name: songs.zip
+          asset_content_type: application/zip
