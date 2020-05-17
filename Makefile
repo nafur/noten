@@ -10,7 +10,10 @@ build/%.ps: tunes/%.abc
 build/%.eps: build/%.ps
 	ps2eps -f $<
 
-build/main.pdf: main.tex $(eps)
+build/%.pdf: build/%.eps
+	epstopdf --gsopt=-dCompatibilityLevel=1.5 $< -outfile=$@
+
+build/main.pdf: main.tex $(pdf)
 	pdflatex -interaction=nonstopmode --output-directory build --shell-escape main.tex
 
 clean:
