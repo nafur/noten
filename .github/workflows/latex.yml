@@ -13,14 +13,18 @@ jobs:
           sudo apt install abcm2ps ps2eps texlive-font-utils texlive-latex-base
       - name: Build
         run: make build/main.pdf build/songs.zip
+      - name: Delete release
+        uses: ame-yu/action-delete-latest-release@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.sha }}
-          release_name: release-${{ github.sha }}
+          tag_name: latest
+          release_name: latest
       - name: Add main file to release
         uses: actions/upload-release-asset@v1
         env:
