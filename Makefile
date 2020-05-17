@@ -17,7 +17,7 @@ build/main.pdf: main.tex $(pdf)
 	pdflatex -interaction=nonstopmode --output-directory build --shell-escape main.tex
 
 build/songs.zip: $(pdf)
-	zip songs.zip build/*.pdf -x build/main.pdf -j
+	zip $@ build/*.pdf -x build/main.pdf -j
 
 clean:
 	rm -f build/* main.pdf
