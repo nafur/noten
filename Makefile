@@ -16,5 +16,8 @@ build/%.pdf: build/%.eps
 build/main.pdf: main.tex $(pdf)
 	pdflatex -interaction=nonstopmode --output-directory build --shell-escape main.tex
 
+build/tunes.zip: $(pdf)
+	zip tunes.zip build/*.pdf -x build/main.pdf -j
+
 clean:
 	rm -f build/* main.pdf
