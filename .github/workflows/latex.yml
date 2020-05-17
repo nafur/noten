@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-          sudo apt install abcm2ps
+          sudo apt install abcm2ps ps2eps
       - name: Build
         run: make build/main.pdf 
       - name: Upload build artifact
