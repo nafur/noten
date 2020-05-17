@@ -4,6 +4,8 @@ ps :=  $(build:abc=ps)
 eps := $(build:abc=eps)
 pdf := $(build:abc=pdf)
 
+.PHONY: clean
+
 build/%.ps: songs/%.abc
 	abcm2ps -c -w 17.5cm -O $@ $<
 
