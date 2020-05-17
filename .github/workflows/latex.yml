@@ -1,0 +1,19 @@
+name: Compile all tunes
+on: [push]
+
+jobs:
+  compile:
+    name: compile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          apt install abcm2ps
+      - name: Build
+        run: make build/main.pdf 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: build/*.pdf
