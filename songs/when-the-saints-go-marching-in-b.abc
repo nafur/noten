@@ -1,0 +1,36 @@
+X:
+T:When the Saints go marching in
+C:Stimme in b
+M:4/4
+L:1/8
+K:C
+V:1
+ GG | cGce c2 cc | eceg e2 (ce) | !<(!LgLg L^g2 La2 L^a2 !<)!|
+ Lb2 c2 e2 f2 |: (g8 | g2) c(e e)e f2 | (g8 |
+ g2) (cB cdef) | g4 f4 | .c2 e6 | (d8 |
+ d2) e(e e)e d2 | c6 c2 | e2 (cB ce g2) | g2 (f6 |
+ f2) f(e e)e f2 | g4 e4 | .c2 Ld6 | [1 (c8 |
+ c2) c2 e2 f2 :| [2 c2 Lg(a a)g .a2 | c'2 z2 z (Lc' ^d'e') | c'2 z2 L!fermata!c'4 |]
+V:2
+ z2 | z4 z2 cc | eceg e2 !tenuto!c!tenuto!c | !<(!LGLG L^G2 LA2 L^A2 !<)!|
+ B2 z2 z4 |: E2 E4 E2 | z2 E2 z2 E2 | z2 E4 E2 |
+ z2 E2 z2 E2 | E2 E4 E2 | z2 E2 z2 E2 | z2 _A(A A)=A _B2 |
+ =B2 z2 z4 | z2 G2 z2 G2 | z2 G2 z2 G2 | A2 A4 A2 |
+ _A2 a2 z2 A2 | z2 G2 z2 E2 | z2 F2 z2 F2 | E2 E4 E2 |
+ E2 z2 z4 :| G2 LG(F F)G .F2 | G2 z2 z (LC ^DE) | C2 z2 L!fermata!A4 |]
+V:3
+ z2 | z4 z2 CC | ECEG E2 (A_A) | !<(!LG2 L^G2 LA2 L^A2 !<)!|
+ G2 z2 z4 |: C2 C4 C2 | z2 C2 z2 C2 | z2 C4 E2 |
+ z2 C2 z2 C2 | C2 C4 C2 | z2 C2 z2 C2 | z2 F(F F)F F2 |
+ F2 z2 z4 | z2 E2 z2 E2 | z2 E2 z2 E2 | F2 F4 F2 |
+ F2 F2 z2 F2 | z2 E2 z2 C2 | z2 C2 z2 D2 | C2 C4 C2 |
+ C2 z2 z4 :| E2 LG(F F)G .C2 | E2 z2 z (LC ^DE) | C2 z2 L!fermata!G4 |]
+V:4
+ z2 | z8 | z8 | !<(!LG2 L_G2 LF2 LE2!<)! |
+ D2 z2 z4 |: C2 z2 G2 z2 | C2 z2 G2 z2 | C2 z2 G2 z2 |
+ c2 B2 A2 G2 | C2 z2 G2 z2 | E2 z2 c2 z2 | G2 ^G2 A2 ^A2 |
+ B2 G2 A2 B2 | c2 z2 G2 z2 | c2 z2 _B2 z2 | A2 z2 c2 z2 |
+ _A2 z2 c2 z2 | G2 z2 c2 z2 | F2 z2 G2 z2 | C2 z2 G2 z2 |
+ C2 z2 z4 :| C2 z2 z4 | C2 z2 z4 | z4 L!fermata!E4 |]
+W:
+W:aus: Flex-ability Pops, Solo-Duet-Trio-Quartet with optional accompaniment, 2001
