@@ -1,4 +1,4 @@
-name: Compile all tunes
+name: Compile all songs
 on: [push]
 
 jobs:
