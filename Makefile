@@ -1,13 +1,18 @@
-songs := $(wildcard songs/*.abc)
-build := $(subst songs,build,$(songs))
-ps :=  $(build:abc=ps)
-eps := $(build:abc=eps)
-pdf := $(build:abc=pdf)
+abcsongs := $(wildcard songs/*.abc)
+lysongs := $(wildcard songs/*.ly)
+abcbuild := $(subst songs,build,$(abcsongs))
+lybuild := $(subst songs,build,$(lysongs))
+pdf := $(abcbuild:abc=pdf) $(lybuild:ly=pdf)
 
 .PHONY: clean
 
+all: $(pdf)
+
 build/%.ps: songs/%.abc
 	abcm2ps -c -w 17.5cm -O $@ $<
+
+build/%.pdf: songs/%.ly
+	lilypond --pdf -o build/ $<
 
 build/%.eps: build/%.ps
 	ps2eps -f $<
