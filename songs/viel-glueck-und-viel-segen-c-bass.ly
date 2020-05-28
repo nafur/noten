@@ -1,4 +1,4 @@
-\version "2.20"
+\version "2.18"
 \header {
 	title = "Viel Glück und viel Segen"
 	subtitle = "Stimme in c im Bass"

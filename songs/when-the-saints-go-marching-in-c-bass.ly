@@ -1,4 +1,4 @@
-\version "2.20"
+\version "2.18"
 \header {
 	title = "When the Saints go marching in"
 	subtitle = "Stimme in c im Bass"
