@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-          sudo apt install abcm2ps ps2eps texlive-font-utils texlive-latex-base
+          sudo apt install abcm2ps lilypond ps2eps texlive-font-utils texlive-latex-base
       - name: Build
         run: make build/main.pdf build/songs.zip
       - name: Delete release
