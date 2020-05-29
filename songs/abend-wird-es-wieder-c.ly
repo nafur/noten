@@ -9,13 +9,18 @@
 \score{
 	\new StaffGroup
     <<
+	\new ChordNames {
+		\chordmode {
+			g2 d2 g1 c4 d4:7 g2 d1:7 g2 a2:min d2:7 g2 c2 g4 d4:7 g1
+		}
+	}
 	\new Staff {
 		\time 4/4 \key g \major
 		\relative {
-			b'4^"G" b4 a4 ^"D" a4 | g2 ^"G" d2
-			e4 ^"C" fis4 ^"D7" g4 ^"G" b4 | a1 ^"D7"
-			b4 ^"G" b4 c4 ^"Am" b4 | a2 ^"D7" d2 ^"G"
-			g,4 ^"C" c4 b4 ^"G" a4 ^"D7" | g1 ^"G" \bar "|."
+			b'4 b4 a4 a4 | g2 d2
+			e4 fis4 g4 b4 | a1
+			b4 b4 c4 b4 | a2 d2
+			g,4 c4 b4 a4 | g1 \bar "|."
 		}
 	}
 	\addlyrics {
