@@ -2,8 +2,7 @@
 \header {
 	title = "Viel Glück und viel Segen"
 	subtitle = "Stimme in c im Bass"
-	crossRefNumber = ""
-	footnotes = ""
+	tagline = ""
 }
 
 \new Staff {

@@ -1,7 +1,7 @@
 \version "2.18"
 \header {
 	title = "Abend wird es wieder"
-	subtitle = "Stimme in c"
+	subtitle = "Stimme in b"
 	tagline = ""
 	copyright = "aus: In Froher Rund', Volkslieder für die Veeh-Harfe, 2016."
 }
@@ -10,12 +10,12 @@
 	\new StaffGroup
     <<
 	\new Staff {
-		\time 4/4 \key g \major
+		\time 4/4 \key a \major
 		\relative {
-			b'4^"G" b4 a4 ^"D" a4 | g2 ^"G" d2
-			e4 ^"C" fis4 ^"D7" g4 ^"G" b4 | a1 ^"D7"
-			b4 ^"G" b4 c4 ^"Am" b4 | a2 ^"D7" d2 ^"G"
-			g,4 ^"C" c4 b4 ^"G" a4 ^"D7" | g1 ^"G" \bar "|."
+			cis''4 cis4 b4 b4 | a2 e2
+			fis4 gis4 a4 cis4 | b1
+			cis4 cis4 d4 cis4 | b2 e2
+			a,4 d4 cis4 b4 | a1 \bar "|."
 		}
 	}
 	\addlyrics {
@@ -26,21 +26,21 @@
 	} 
 	\new Staff <<
 		{
-			\time 4/4 \key g \major
+			\time 4/4 \key a \major
 			\relative {
-				g'2 d2 | b2 b2 |
-				c2 b2 | d1 |
-				g2 e2 | c2 b4 g'8 fis8 |
-				e2 d4 c4 | b1
+				a'2 e2 | cis2 cis2 |
+				d2 cis2 | e1 |
+				a2 fis2 | d2 cis4 a'8 gis8 |
+				fis2 e4 d4 | cis1
 			}
 		} \\
 		{
-			\time 4/4 \key g \major
+			\time 4/4 \key a \major
 			\relative {
-				g2 d'2 | b2 g2 |
-				c2 d2 | c4 e4 fis4 d4 |
-				g,2 a2 | c4 d4 b4 g'8 fis8 |
-				e2 d4 c4 | b4 d4 g,2
+				a2 e'2 | cis2 a2 |
+				d2 e2 | d4 fis4 gis4 e4 |
+				a,2 b2 | d4 e4 cis4 a'8 gis8 |
+				fis2 e4 d4 | cis4 e4 a,2
 			}
 		}
 	>>
