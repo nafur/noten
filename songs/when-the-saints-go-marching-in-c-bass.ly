@@ -13,7 +13,7 @@ voicedefault =  {
 voiceA = {
 \partial 4
 \relative {
-	f'8[ f8] | bes8[ f8 bes8 d8] bes4 bes8 bes8 |  d8[ bes8 d8 f8] d4 bes8([ d8]-) |
+	f'8[ f8] | bes8[ f8 bes8 d8] bes4 bes8 bes8 |  d8[ bes8 d8 f8] d4 bes8([ d,8]-) |
 	f8\<-> f8-> fis4-> g4-> gis4\!-> | a4-> bes,4 d4 es4 |
 \repeat volta 2 {
 	f1( | f4-) bes,8[ d8]( d8-)[ d8] es4 | f1( | f4-) bes,8([ a8] bes8[ c8 d8 es8]) |
