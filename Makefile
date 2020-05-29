@@ -3,6 +3,7 @@ lysongs := $(wildcard songs/*.ly)
 abcbuild := $(subst songs,build,$(abcsongs))
 lybuild := $(subst songs,build,$(lysongs))
 pdf := $(abcbuild:abc=pdf) $(lybuild:ly=pdf)
+midi := $(lybuild:ly=midi)
 
 .PHONY: clean
 
@@ -12,7 +13,10 @@ build/%.ps: songs/%.abc
 	abcm2ps -c -w 17.5cm -O $@ $<
 
 build/%.pdf: songs/%.ly
-	lilypond --pdf -o build/ $<
+	lilypond -f pdf -o build/ $<
+
+build/%.midi: songs/%.ly
+	lilypond -f midi -o build/ $<
 
 build/%.eps: build/%.ps
 	ps2eps -f $<
@@ -25,6 +29,9 @@ build/main.pdf: main.tex $(pdf)
 
 build/songs.zip: $(pdf)
 	zip $@ build/*.pdf -x build/main.pdf -j
+
+build/midi.zip: $(midi)
+	zip $@ build/*.midi -j
 
 clean:
 	rm -f build/* main.pdf
