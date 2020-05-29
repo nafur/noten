@@ -12,7 +12,7 @@ jobs:
         run: |
           sudo apt install abcm2ps lilypond ps2eps texlive-font-utils texlive-latex-base
       - name: Build
-        run: make build/main.pdf build/songs.zip
+        run: make all build/songs.zip build/midi.zip
       - name: Delete release
         uses: ame-yu/action-delete-latest-release@v2
         with:
