@@ -5,10 +5,12 @@
 
 \begin{document}
 
-\lilypondfile{songs/abend-wird-es-wieder-c-bass.ly}
+\lilypondfile{songs/abend-wird-es-wieder-c.ly}
 
+\vspace{1cm}
 \lilypondfile{songs/abend-wird-es-wieder-b.ly}
 
-\lilypondfile{songs/when-the-saints-go-marching-in-c.ly}
+\vspace{1cm}
+\lilypondfile{songs/abend-wird-es-wieder-c-bass.ly}
 
 \end{document}

@@ -10,16 +10,17 @@
 
 abcsongs := $(wildcard songs/*.abc)
 lysongs := $(wildcard songs/*.ly)
-texfiles := $(wildcard *.lytex)
+docs := $(wildcard documents/*.lytex)
 abcbuild := $(subst songs,build,$(abcsongs))
 lybuild := $(subst songs,build,$(lysongs))
-tex := $(addprefix build/,$(texfiles))
+docbuild := $(subst documents,build,$(docs))
 pdf := $(abcbuild:abc=pdf) $(lybuild:ly=pdf)
 midi := $(lybuild:ly=midi)
+doc := $(docbuild:lytex=pdf)
 
 .PHONY: clean
 
-all: $(pdf) $(tex:lytex=pdf)
+all: $(pdf) $(doc)
 
 build/%.pdf: songs/%.ly
 	lilypond -f pdf -o build/ $<
@@ -27,14 +28,17 @@ build/%.pdf: songs/%.ly
 build/%.midi: songs/%.ly
 	lilypond -f midi -o build/ $<
 
-build/%.pdf: %.lytex
+build/%.pdf: documents/%.lytex
 	lilypond-book --output build/ --pdf $<
-	cd build/ && pdflatex -interaction=nonstopmode --shell-escape $(<:lytex=tex)
+	cd build/ && pdflatex -interaction=nonstopmode --shell-escape ../$(@:pdf=tex)
 
 build/songs.zip: $(pdf)
 	zip $@ $^ -j
 
 build/midi.zip: $(midi)
+	zip $@ $^ -j
+
+build/docs.zip: $(doc)
 	zip $@ $^ -j
 
 # Legacy for abc files

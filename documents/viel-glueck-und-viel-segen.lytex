@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{geometry}
+\pagestyle{empty}
+\geometry{a4paper, left=1cm, right=1cm, top=1cm, bottom=1cm}
+
+\begin{document}
+
+\lilypondfile{songs/viel-glueck-und-viel-segen-c.ly}
+
+\vspace{1cm}
+\lilypondfile{songs/viel-glueck-und-viel-segen-b.ly}
+
+\vspace{1cm}
+\lilypondfile{songs/viel-glueck-und-viel-segen-c-bass.ly}
+
+\end{document}
