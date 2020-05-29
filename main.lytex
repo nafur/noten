@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{geometry}
+\pagestyle{empty}
+\geometry{a4paper, left=1cm, right=1cm, top=1cm, bottom=1cm}
+
+\begin{document}
+
+\lilypondfile{songs/abend-wird-es-wieder-c-bass.ly}
+
+\lilypondfile{songs/abend-wird-es-wieder-b.ly}
+
+\lilypondfile{songs/when-the-saints-go-marching-in-c.ly}
+
+\end{document}
