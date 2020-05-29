@@ -53,11 +53,10 @@
 	>>
     >>
 	\midi {}
-}
-
-\layout {
-	\context {
-	\Score
-	\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16)
+	\layout {
+		\context {
+		\Score
+		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16)
+		}
 	}
 }
