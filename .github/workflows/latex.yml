@@ -34,7 +34,7 @@ jobs:
           asset_path: build/main.pdf
           asset_name: main.pdf
           asset_content_type: application/pdf
-      - name: Add individual songs to release
+      - name: Add pdfs to release
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -42,4 +42,13 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: build/songs.zip
           asset_name: songs.zip
+          asset_content_type: application/zip
+      - name: Add midis to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: build/midi.zip
+          asset_name: midi.zip
           asset_content_type: application/zip
