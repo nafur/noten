@@ -15,9 +15,9 @@ voiceA = {
 \relative {
 	f'8[ f8] | bes8[ f8 bes8 d8] bes4 bes8 bes8 |  d8[ bes8 d8 f8] d4 bes8([ d8]-) |
 	f8\<-> f8-> fis4-> g4-> gis4\!-> | a4-> bes,4 d4 es4 |
-\repeat volta 2 {
+\repeat volta 5 {
 	f1( | f4-) bes,8[ d8]( d8-)[ d8] es4 | f1( | f4-) bes,8([ a8] bes8[ c8 d8 es8]) |
-	f2 es2 | bes4-. d2. | c1( | c4-) d8 d8( d8-) d8 c4 |
+	f2 d2 | bes4-. d2. | c1( | c4-) d8 d8( d8-) d8 c4 |
 	bes2. bes4 | d4 bes8( a8 bes8 d8 f4-) | f4 es2.( | es4-) es8 d8( d8-) d8 es4 |
 	f2 d2 | bes4-. c2.-> | 
 }
