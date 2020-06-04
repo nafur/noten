@@ -28,7 +28,7 @@ build/%.pdf: songs/%.ly
 build/%.midi: songs/%.ly
 	lilypond -f midi -o build/ $<
 
-build/%.pdf: documents/%.lytex
+build/%.pdf: documents/%.lytex $(lysongs)
 	lilypond-book --output build/ --pdf $<
 	cd build/ && pdflatex -interaction=nonstopmode --shell-escape ../$(@:pdf=tex)
 
